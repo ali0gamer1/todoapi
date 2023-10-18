@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%load static %}
+{%block content%}
+	<section>
+		{% for todo in todos %}
+			{% if forloop.counter|divisibleby:7 %}<br>{% endif %}
+			<div style="display: inline-block;margin-right: 10%;">
+				<a href="{% url 'task' todo.id %}" >
+					<p>{{todo.title}}</p>
+					<span style="color: black;">by: {{todo.user.username}}</span>
+				</a>
+			</div>	
+		{% endfor %}
+	</section>
+	
+{%endblock content%}
