@@ -8,3 +8,9 @@ class TodoSerializer(serializers.ModelSerializer):
         model = Task
         fields = ["title", "description", "completed","user"]
     
+
+class TodoUserSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Task
+        exclude = ["user","font_size"]

@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     "todo",
     "users",
     "api",
-    "rest_framework"
+    "rest_framework",
+    "rest_framework.authtoken",
+    
     
 ]
 LOGIN_URL = 'login'
